@@ -1,0 +1,18 @@
+extends template
+
+block content
+  h1 Update Contact Form
+
+  form(action=`/student/${contactForm.id}/update`, method="post")
+    label(for="fullname") Fullname:
+    input(type="text", name="fullname", value=contactForm.fullname, required)
+    
+    label(for="email") Email:
+    input(type="email", name="email", value=contactForm.email, required)
+    
+    label(for="age") Age:
+    input(type="number", name="age", value=contactForm.age, required)
+    
+    // Add other form fields as needed
+    
+    button(type="submit") Update

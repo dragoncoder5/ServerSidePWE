@@ -1,0 +1,13 @@
+extends template
+
+block content
+  h1 Student Page
+
+  each contactForm in contactForms
+    div
+      p Fullname: #{contactForm.fullname}
+      p Email: #{contactForm.email}
+      p Age: #{contactForm.age}
+      // Add other form fields as needed
+      a(href=`/student/${contactForm.id}/update`) Update
+      a(href=`/student/${contactForm.id}/delete`) Delete
